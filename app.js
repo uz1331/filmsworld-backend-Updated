@@ -18,6 +18,9 @@ app.use("/",
     express.static( path.resolve(__dirname, "./public/banner/"))
 );
 
+app.get("/", (req, res) => {
+    res.send("FilmsWorld Backend Is Working!")
+})
 app.use("/api", Route)
 
 // Start the server
